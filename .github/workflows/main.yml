@@ -7,11 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: npm ci
+      - run: npm ci --only=prod
       - run: npm build
 
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - run: npm ci
+      - run: npm ci --only=prod
       - run: npm inspect

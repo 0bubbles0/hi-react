@@ -7,11 +7,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: npm ci --only=prod
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      - run: npm ci
       - run: npm build
 
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - run: npm ci --only=prod
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+      - run: npm ci
       - run: npm inspect

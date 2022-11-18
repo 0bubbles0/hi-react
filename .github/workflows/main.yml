@@ -1,27 +1,27 @@
-name: Main
+# name: Main
 
-on:
-  - push
+# on:
+#   - push
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: "**/node_modules"
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - run: npm ci
-      - run: npm run build
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/cache@v2
+#         with:
+#           path: "**/node_modules"
+#           key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+#       - run: npm ci
+#       - run: npm run build
 
-  inspect:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: "**/node_modules"
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - run: npm ci
-      - run: npm run inspect
+#   inspect:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/cache@v2
+#         with:
+#           path: "**/node_modules"
+#           key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+#       - run: npm ci
+#       - run: npm run inspect

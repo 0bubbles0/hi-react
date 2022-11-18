@@ -13,7 +13,7 @@ jobs:
           path: "**/node_modules"
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: npm ci
-      - run: npm build
+      - run: npm run build
 
   inspect:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
           path: "**/node_modules"
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: npm ci
-      - run: npm inspect
+      - run: npm run inspect

@@ -8,6 +8,9 @@
     "fix": "npm run fix:lint && npm run fix:prettier",
     "fix:lint": "eslint src --fix",
     "fix:prettier": "prettier --write src",
+    "inspect": "npm run inspect:lint && npm run inspect:prettier",
+    "inspect:lint": "eslint src",
+    "inspect:prettier": "prettier --check src",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },

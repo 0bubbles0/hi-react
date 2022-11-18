@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with the command `$ npx create-react-app name-of-app --template typescript`.
 Then I renamed the git branch with `$ git branch -m main`.
+This project is deployed on <melodious-medovik-5a00f9.netlify.app/> via Netlify.
 
 ## Available Scripts
 
@@ -14,6 +15,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `npm run fix`
+
+Checks and automatically fixes linting errors.
 
 ### `npm test`
 

@@ -4,9 +4,9 @@ import "./common/assets/styles/App.css"
 
 export function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className="App bg-green-500">
       <header className="App-header">
-        <h1>Hiiiiii</h1>
+        <h1 className="text-amber-300">Hiiiii</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

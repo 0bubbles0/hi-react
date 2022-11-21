@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 
+import { TopBar } from "common/components/ui/TopBar"
 import { NotFound404 } from "common/pages/404NotFound"
 import { Home } from "features/home"
 
@@ -10,7 +11,7 @@ export function App(): JSX.Element {
     <div className="app">
       {/* Any Pop-up modals */}
       <div className="viewport">
-        {/* <TopBar /> */}
+        <TopBar />
         <div className="canvas">
           <Routes>
             <Route path="/" element={<Home />}></Route>
